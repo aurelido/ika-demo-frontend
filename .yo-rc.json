@@ -1,0 +1,26 @@
+{
+  "generator-jhipster": {
+    "baseName": "ikaDemo",
+    "clientFramework": "angular",
+    "clientTestFrameworks": ["cypress"],
+    "clientTheme": "cosmo",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1711629830216,
+    "cypressAudit": false,
+    "cypressCoverage": false,
+    "devServerPort": 4200,
+    "enableTranslation": true,
+    "entities": [],
+    "jhiPrefix": "ika",
+    "jhipsterVersion": "8.2.1",
+    "languages": ["nl", "en"],
+    "microfrontend": null,
+    "microfrontends": [],
+    "nativeLanguage": "nl",
+    "skipCommitHook": true,
+    "skipJhipsterDependencies": true,
+    "skipServer": true,
+    "testFrameworks": ["cypress"],
+    "withAdminUi": false
+  }
+}

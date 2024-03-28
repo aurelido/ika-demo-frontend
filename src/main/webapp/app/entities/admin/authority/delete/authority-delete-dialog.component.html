@@ -1,0 +1,30 @@
+@if (authority) {
+  <form name="deleteForm" (ngSubmit)="confirmDelete(authority.name!)">
+    <div class="modal-header">
+      <h4 class="modal-title" data-cy="authorityDeleteDialogHeading" ikaTranslate="entity.delete.title">Bevestig wisbewerking</h4>
+
+      <span class="btn btn-close" data-dismiss="modal" aria-hidden="true" (click)="cancel()"></span>
+    </div>
+
+    <div class="modal-body">
+      <ika-alert-error></ika-alert-error>
+      <p
+        id="ika-delete-authority-heading"
+        ikaTranslate="ikaDemoApp.adminAuthority.delete.question"
+        [translateValues]="{ id: authority.name }"
+      >
+        Bent u zeker dat u Authority {{ authority.name }} wilt verwijderen?
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        <fa-icon icon="ban"></fa-icon>&nbsp;<span ikaTranslate="entity.action.cancel">Annuleren</span>
+      </button>
+
+      <button id="ika-confirm-delete-authority" data-cy="entityConfirmDeleteButton" type="submit" class="btn btn-danger">
+        <fa-icon icon="times"></fa-icon>&nbsp;<span ikaTranslate="entity.action.delete">Verwijderen</span>
+      </button>
+    </div>
+  </form>
+}

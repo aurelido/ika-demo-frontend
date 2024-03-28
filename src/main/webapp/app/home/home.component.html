@@ -1,0 +1,84 @@
+<div class="row">
+  <div class="col-md-3">
+    <span class="hipster img-fluid rounded"></span>
+  </div>
+
+  <div class="col-md-9">
+    <h1 class="display-4"><span ikaTranslate="home.title">Welkom, Java Hipster!</span> (Ika Demo)</h1>
+
+    <p class="lead" ikaTranslate="home.subtitle">Dit is uw startpagina</p>
+
+    <div>
+      @if (account() !== null) {
+        <div class="alert alert-success">
+          @if (account()) {
+            <span id="home-logged-message" ikaTranslate="home.logged.message" [translateValues]="{ username: account()!.login }"
+              >U bent aangemeld als gebruiker &quot;{{ account()!.login }}&quot;.</span
+            >
+          }
+        </div>
+      } @else {
+        <div class="alert alert-warning">
+          <span ikaTranslate="global.messages.info.authenticated.prefix">Indien u wilt </span>
+          <a class="alert-link" (click)="login()" ikaTranslate="global.messages.info.authenticated.link">aanmelden</a
+          ><span ikaTranslate="global.messages.info.authenticated.suffix"
+            >, dan kan u de standaard gebruikers proberen:<br />- Administrator (login=&quot;admin&quot; en wachtwoord=&quot;admin&quot;)
+            <br />- Gebruiker (login=&quot;user&quot; en wachtwoord=&quot;user&quot;).</span
+          >
+        </div>
+
+        <div class="alert alert-warning">
+          <span ikaTranslate="global.messages.info.register.noaccount">U heeft nog geen gebruiker?</span>&nbsp;
+          <a class="alert-link" routerLink="/account/register" ikaTranslate="global.messages.info.register.link"
+            >Registreer een nieuwe gebruiker</a
+          >
+        </div>
+      }
+    </div>
+
+    <p ikaTranslate="home.question">Indien u vragen hebt over JHipster:</p>
+
+    <ul>
+      <li>
+        <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" ikaTranslate="home.link.homepage"
+          >JHipster startpagina</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://stackoverflow.com/tags/jhipster/info"
+          target="_blank"
+          rel="noopener noreferrer"
+          ikaTranslate="home.link.stackoverflow"
+          >JHipster op Stack Overflow</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/jhipster/generator-jhipster/issues?state=open"
+          target="_blank"
+          rel="noopener noreferrer"
+          ikaTranslate="home.link.bugtracker"
+          >JHipster bug tracker</a
+        >
+      </li>
+      <li>
+        <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" ikaTranslate="home.link.chat"
+          >JHipster publieke chatruimte</a
+        >
+      </li>
+      <li>
+        <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer" ikaTranslate="home.link.follow"
+          >contacteer &#64;jhipster op Twitter</a
+        >
+      </li>
+    </ul>
+
+    <p>
+      <span ikaTranslate="home.like">Als u JHipster leuk vindt, vergeet dan niet om ons een ster te geven op</span>
+      <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" ikaTranslate="home.github"
+        >GitHub</a
+      >!
+    </p>
+  </div>
+</div>

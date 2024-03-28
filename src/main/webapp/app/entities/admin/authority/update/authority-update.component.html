@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="ika-authority-heading" data-cy="AuthorityCreateUpdateHeading" ikaTranslate="ikaDemoApp.adminAuthority.home.createOrEditLabel">
+        Maak of wijzig een Authority
+      </h2>
+
+      <div>
+        <ika-alert-error></ika-alert-error>
+
+        <div class="mb-3">
+          <label class="form-label" ikaTranslate="ikaDemoApp.adminAuthority.name" for="field_name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            id="field_name"
+            data-cy="name"
+            formControlName="name"
+            [readonly]="editForm.get('name')!.disabled"
+          />
+          @if (editForm.get('name')!.invalid && (editForm.get('name')!.dirty || editForm.get('name')!.touched)) {
+            <div>
+              @if (editForm.get('name')?.errors?.required) {
+                <small class="form-text text-danger" ikaTranslate="entity.validation.required">Dit veld is vereist.</small>
+              }
+              @if (editForm.get('name')?.errors?.maxlength) {
+                <small class="form-text text-danger" ikaTranslate="entity.validation.maxlength" [translateValues]="{ max: 50 }"
+                  >Dit veld kan niet langer zijn dan 50 tekens.</small
+                >
+              }
+            </div>
+          }
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span ikaTranslate="entity.action.cancel">Annuleren</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span ikaTranslate="entity.action.save">Opslaan</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
