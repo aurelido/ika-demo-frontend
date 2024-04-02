@@ -1,5 +1,5 @@
 @import 'bootstrap/scss/functions';
-@import 'bootswatch/dist/cosmo/variables';
+@import 'bootswatch/dist/default/variables';
 @import 'bootstrap/scss/variables';
 
 /* ==========================================================================
@@ -43,6 +43,6 @@ Logo styles
   width: 45px;
   display: inline-block;
   vertical-align: middle;
-  background: url('/content/images/logo-jhipster.png') no-repeat center center;
+  background: url('/content/images/belastingdienst-logo.png') no-repeat center center;
   background-size: contain;
 }

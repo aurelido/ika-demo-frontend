@@ -49,14 +49,14 @@ describe('/account/settings', () => {
 
   it("should be able to change 'user' firstname settings", () => {
     cy.get(firstNameSettingsSelector).clear();
-    cy.get(firstNameSettingsSelector).type('jhipster');
+    cy.get(firstNameSettingsSelector).type('developer');
     cy.get(submitSettingsSelector).click();
     cy.wait('@settingsSave').then(({ response }) => expect(response?.statusCode).to.equal(200));
   });
 
   it("should be able to change 'user' lastname settings", () => {
     cy.get(lastNameSettingsSelector).clear();
-    cy.get(firstNameSettingsSelector).type('jhipster');
+    cy.get(firstNameSettingsSelector).type('developer');
     cy.get(lastNameSettingsSelector).type('retspihj');
     cy.get(submitSettingsSelector).click();
     cy.wait('@settingsSave').then(({ response }) => expect(response?.statusCode).to.equal(200));
@@ -64,7 +64,7 @@ describe('/account/settings', () => {
 
   it("should be able to change 'user' email settings", () => {
     cy.get(emailSettingsSelector).clear();
-    cy.get(firstNameSettingsSelector).type('jhipster');
+    cy.get(firstNameSettingsSelector).type('developer');
     cy.get(emailSettingsSelector).type('user@localhost.fr');
     cy.get(submitSettingsSelector).click();
     cy.wait('@settingsSave').then(({ response }) => expect(response?.statusCode).to.equal(200));
@@ -93,7 +93,7 @@ describe('/account/settings', () => {
 
     it("should not be able to change 'user' email to same value", () => {
       cy.get(emailSettingsSelector).clear();
-      cy.get(firstNameSettingsSelector).type('jhipster');
+      cy.get(firstNameSettingsSelector).type('developer');
       cy.get(emailSettingsSelector).type(testAdminEmail);
       cy.get(submitSettingsSelector).click();
       cy.wait('@settingsSave').then(({ response }) => expect(response?.statusCode).to.equal(400));

@@ -15,6 +15,7 @@ import { Account } from 'app/core/auth/account.model';
   imports: [SharedModule, RouterModule],
 })
 export default class HomeComponent implements OnInit, OnDestroy {
+  projectName = "IKA Demo";
   account = signal<Account | null>(null);
 
   private readonly destroy$ = new Subject<void>();

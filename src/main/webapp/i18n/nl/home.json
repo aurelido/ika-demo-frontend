@@ -1,19 +1,9 @@
 {
   "home": {
-    "title": "Welkom, Java Hipster!",
-    "subtitle": "Dit is uw startpagina",
+    "title": "Welkom bij de IKA Demo!",
+    "subtitle": "Houd er rekening mee dat dit een demonstratie is en dat er aanpassingen nodig zijn om aan te sluiten bij <b>IKA</b> look-and-feelvereisten.",
     "logged": {
       "message": "U bent aangemeld als gebruiker \"{{username}}\"."
-    },
-    "question": "Indien u vragen hebt over JHipster:",
-    "link": {
-      "homepage": "JHipster startpagina",
-      "stackoverflow": "JHipster op Stack Overflow",
-      "bugtracker": "JHipster bug tracker",
-      "chat": "JHipster publieke chatruimte",
-      "follow": "contacteer @jhipster op Twitter"
-    },
-    "like": "Als u JHipster leuk vindt, vergeet dan niet om ons een ster te geven op",
-    "github": "GitHub"
+    }
   }
 }

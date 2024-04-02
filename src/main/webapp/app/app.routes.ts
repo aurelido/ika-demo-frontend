@@ -28,10 +28,6 @@ const routes: Routes = [
     loadChildren: () => import('./admin/admin.routes'),
   },
   {
-    path: 'account',
-    loadChildren: () => import('./account/account.route'),
-  },
-  {
     path: 'login',
     component: LoginComponent,
     title: 'login.title',

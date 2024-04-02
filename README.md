@@ -1,8 +1,7 @@
-# ikaDemo
-
-This application was generated using JHipster 8.2.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.2.1](https://www.jhipster.tech/documentation-archive/v8.2.1).
+# IKA Demo - Frontend
 
 ## Project Structure
+
 
 ## Development
 
@@ -24,7 +23,7 @@ Run the following commands in two separate terminals to create a blissful develo
 auto-refreshes when files change on your hard drive.
 
 ```
-./mvnw
+./mvn quarkus:dev
 npm start
 ```
 
@@ -34,14 +33,26 @@ Add the `help` flag on any command to see how you can use it. For example, `npm 
 
 The `npm run` command will list all of the scripts available to run for this project.
 
+### Testing ( Client tests )
+
+Unit tests are run by [Jest][]. They're located in [src/test/javascript/](src/test/javascript/) and can be run with:
+
+```
+npm test
+```
+
+UI end-to-end tests are powered by [Cypress][]. They're located in [src/test/javascript/cypress](src/test/javascript/cypress)
+and can be run by starting the backend in one terminal (`./mvn quarkus:dev`) and running the tests (`npm run e2e`) in a second one.
+
+
 ### PWA Support
 
-JHipster ships with PWA (Progressive Web App) support, and it's turned off by default. One of the main components of a PWA is a service worker.
+PWA (Progressive Web App) support is turned off by default. One of the main components of a PWA is a service worker.
 
 The service worker initialization code is disabled by default. To enable it, uncomment the following code in `src/main/webapp/app/app.config.ts`:
 
 ```typescript
-ServiceWorkerModule.register('ngsw-worker.js', { enabled: false }),
+ServiceWorkerModule.register('ngsw-worker.js', { enabled: false });
 ```
 
 ### Managing dependencies
@@ -71,10 +82,6 @@ Edit [src/main/webapp/content/scss/vendor.scss](src/main/webapp/content/scss/ven
 @import 'leaflet/dist/leaflet.css';
 ```
 
-Note: There are still a few other things remaining to do for Leaflet that we won't detail here.
-
-For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
-
 ### Using Angular CLI
 
 You can also use [Angular CLI][] to generate some custom client code.
@@ -93,41 +100,15 @@ create src/main/webapp/app/my-component/my-component.component.ts
 update src/main/webapp/app/app.config.ts
 ```
 
-## Building for production
+## Building ...
+To Be Defined.
 
-## Testing
 
-### Client tests
-
-Unit tests are run by [Jest][]. They're located in [src/test/javascript/](src/test/javascript/) and can be run with:
-
-```
-npm test
-```
-
-UI end-to-end tests are powered by [Cypress][]. They're located in [src/test/javascript/cypress](src/test/javascript/cypress)
-and can be run by starting Spring Boot in one terminal (`./mvnw spring-boot:run`) and running the tests (`npm run e2e`) in a second one.
-
-#### Lighthouse audits
-
-You can execute automated [lighthouse audits][https://developers.google.com/web/tools/lighthouse/] with [cypress audits][https://github.com/mfrachet/cypress-audit] by running `npm run e2e:cypress:audits`.
-You should only run the audits when your application is packaged with the production profile.
-The lighthouse report is created in `target/cypress/lhreport.html`
-
-[JHipster Homepage and latest documentation]: https://www.jhipster.tech
-[JHipster 8.2.1 archive]: https://www.jhipster.tech/documentation-archive/v8.2.1
-[Using JHipster in development]: https://www.jhipster.tech/documentation-archive/v8.2.1/development/
-[Using Docker and Docker-Compose]: https://www.jhipster.tech/documentation-archive/v8.2.1/docker-compose
-[Using JHipster in production]: https://www.jhipster.tech/documentation-archive/v8.2.1/production/
-[Running tests page]: https://www.jhipster.tech/documentation-archive/v8.2.1/running-tests/
-[Code quality page]: https://www.jhipster.tech/documentation-archive/v8.2.1/code-quality/
-[Setting up Continuous Integration]: https://www.jhipster.tech/documentation-archive/v8.2.1/setting-up-ci/
 [Node.js]: https://nodejs.org/
 [NPM]: https://www.npmjs.com/
 [Webpack]: https://webpack.github.io/
 [BrowserSync]: https://www.browsersync.io/
 [Jest]: https://facebook.github.io/jest/
 [Cypress]: https://www.cypress.io/
-[Leaflet]: https://leafletjs.com/
-[DefinitelyTyped]: https://definitelytyped.org/
+[DefinitelyTyped]: https://github.com/DefinitelyTyped/DefinitelyTyped/
 [Angular CLI]: https://cli.angular.io/

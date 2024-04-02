@@ -35,23 +35,23 @@ describe('/account/password', () => {
 
   it('requires new password', () => {
     cy.get(newPasswordSelector).should('have.class', classInvalid);
-    cy.get(newPasswordSelector).type('jhipster');
+    cy.get(newPasswordSelector).type('ika');
     cy.get(newPasswordSelector).blur();
     cy.get(newPasswordSelector).should('have.class', classValid);
   });
 
   it('requires confirm new password', () => {
-    cy.get(newPasswordSelector).type('jhipster');
+    cy.get(newPasswordSelector).type('ika');
     cy.get(confirmPasswordSelector).should('have.class', classInvalid);
-    cy.get(confirmPasswordSelector).type('jhipster');
+    cy.get(confirmPasswordSelector).type('ika');
     cy.get(confirmPasswordSelector).blur();
     cy.get(confirmPasswordSelector).should('have.class', classValid);
   });
 
   it('should fail to update password when using incorrect current password', () => {
     cy.get(currentPasswordSelector).type('wrong-current-password');
-    cy.get(newPasswordSelector).type('jhipster');
-    cy.get(confirmPasswordSelector).type('jhipster');
+    cy.get(newPasswordSelector).type('ika');
+    cy.get(confirmPasswordSelector).type('ika');
     cy.get(submitPasswordSelector).click();
     cy.wait('@passwordSave').then(({ response }) => expect(response.statusCode).to.equal(400));
   });

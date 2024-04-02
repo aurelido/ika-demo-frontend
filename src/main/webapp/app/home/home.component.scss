@@ -2,11 +2,11 @@
 Main page styles
 ========================================================================== */
 
-.hipster {
+.home {
   display: inline-block;
   width: 347px;
-  height: 497px;
-  background: url('../../content/images/jhipster_family_member_2.svg') no-repeat center top;
+  height: 500px;
+  background: url('../../content/images/belastingdienst-logo.png') no-repeat center top;
   background-size: contain;
 }
 
@@ -16,8 +16,36 @@ Main page styles
   only screen and (-o-min-device-pixel-ratio: 2/1),
   only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
-  .hipster {
-    background: url('../../content/images/jhipster_family_member_2.svg') no-repeat center top;
+  .home {
+    background: url('../../content/images/belastingdienst-logo.png') no-repeat center top;
     background-size: contain;
   }
+}
+.callout {
+  color: white;
+  font-size: 3.5rem;
+  margin: 0;
+  padding-top: 2rem;
+  grid-column: span 8;
+}
+.app-details {
+  color: #000066;
+  margin: 1rem 0;
+  border: 1px solid lightgrey;
+  padding: 1rem;
+  background: white;
+  font-size: .75rem;
+  font-weight: 300;
+  grid-column: span 4;
+}
+.app-details code { font-size: 87.5%; }
+.app-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.app-details ul li { margin-bottom: 0.2rem; }
+.app-details h5 {
+  margin: 0;
+  padding: 0;
 }

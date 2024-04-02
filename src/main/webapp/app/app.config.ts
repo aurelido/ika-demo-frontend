@@ -20,7 +20,6 @@ import './config/dayjs';
 import { TranslationModule } from 'app/shared/language/translation.module';
 import { httpInterceptorProviders } from './core/interceptor';
 import routes from './app.routes';
-// jhipster-needle-angular-add-module-import JHipster will add new module here
 import { NgbDateDayjsAdapter } from './config/datepicker-adapter';
 import { AppPageTitleStrategy } from './app-page-title-strategy';
 
@@ -55,7 +54,6 @@ export const appConfig: ApplicationConfig = {
     { provide: LOCALE_ID, useValue: 'nl' },
     { provide: NgbDateAdapter, useClass: NgbDateDayjsAdapter },
     httpInterceptorProviders,
-    { provide: TitleStrategy, useClass: AppPageTitleStrategy },
-    // jhipster-needle-angular-add-module JHipster will add new module here
+    { provide: TitleStrategy, useClass: AppPageTitleStrategy }
   ],
 };

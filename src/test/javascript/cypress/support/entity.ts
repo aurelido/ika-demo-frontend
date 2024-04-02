@@ -38,23 +38,6 @@ Cypress.Commands.add('getEntityDeleteDialogHeading', (entityInstanceName: string
   return cy.get(`[data-cy="${entityInstanceName}DeleteDialogHeading"]`);
 });
 
-Cypress.Commands.add('setFieldImageAsBytesOfEntity', (fieldName: string, fileName: string, mimeType: string) => {
-  // fileName is the image which you have already put in cypress fixture folder
-  // should be like : 'integration-test.png', 'image/png'
-  cy.fixture(fileName)
-    .as('image')
-    .get(`[data-cy="${fieldName}"]`)
-    .then(function (el) {
-      const blob = Cypress.Blob.base64StringToBlob(this.image, mimeType);
-      const file = new File([blob], fileName, { type: mimeType });
-      const list = new DataTransfer();
-      list.items.add(file);
-      const myFileList = list.files;
-      (el[0] as HTMLInputElement).files = myFileList;
-      el[0].dispatchEvent(new Event('change', { bubbles: true }));
-    });
-});
-
 Cypress.Commands.add('setFieldSelectToLastOfEntity', (fieldName: string) => {
   return cy.get(`[data-cy="${fieldName}"]`).then(select => {
     const selectSize = (select[0] as HTMLSelectElement)?.options?.length || Number(select.attr('size')) || 0;
@@ -78,7 +61,6 @@ declare global {
       getEntityCreateUpdateHeading(entityName: string): Cypress.Chainable;
       getEntityDetailsHeading(entityInstanceName: string): Cypress.Chainable;
       getEntityDeleteDialogHeading(entityInstanceName: string): Cypress.Chainable;
-      setFieldImageAsBytesOfEntity(fieldName: string, fileName: string, mimeType: string): Cypress.Chainable;
       setFieldSelectToLastOfEntity(fieldName: string): Cypress.Chainable;
     }
   }

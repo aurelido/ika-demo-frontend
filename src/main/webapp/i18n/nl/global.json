@@ -4,10 +4,8 @@
     "browsehappy": "U gebruikt een <strong>verouderde</strong> browser. <a href=\"http://browsehappy.com/?locale=en\">upgrade uw browser</a> om de bruikbaarheid te verbeteren.",
     "menu": {
       "home": "Startpagina",
-      "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entiteiten",
-        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
         "adminAuthority": "Authority"
       },
       "account": {
@@ -28,8 +26,7 @@
         "configuration": "Configuration",
         "logs": "Logboek",
         "apidocs": "API",
-        "database": "Databank",
-        "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+        "database": "Databank"
       },
       "language": "Taal"
     },
@@ -139,5 +136,5 @@
       "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
     }
   },
-  "footer": "Dit is uw voettekst"
+  "footer": ""
 }
